@@ -103,14 +103,6 @@ const getconsultasRapidasByDoctorAndPaciente = async (req,res,next) => {
 
         getConsultasRapidasPaciente = getConsultasRapidasDoctor.filter(data => data.idPaciente.toString() === pacienteId)
 
-        // getConsultasRapidasPaciente = getConsultasRapidasDoctor.map(data => {
-        //     return {
-        //         condition: data.idPaciente.toString() === pacienteId.toString(),
-        //         idPaciente: data.idPaciente,
-        //         pacienteId: pacienteId
-        //     }
-        // });
-
         if(getConsultasRapidasPaciente.length === 0){
             throw new httpError(`could not find any flash consult with this paciente`,404)
         }
