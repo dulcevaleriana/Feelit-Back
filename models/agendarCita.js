@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const agendarCitaSchema = mongoose.Schema({
     idPaciente:{ type: mongoose.Types.ObjectId, required: true, ref: 'Paciente'},
     idDoctor:{ type: mongoose.Types.ObjectId, required: true, ref: 'Doctor' },
-    date:{type: Date, required: true},
+    date:{type: String, required: true},
     time:{type: String, required: true},
     paymentStatus:{type: Boolean, required: true},
     status:{type: String, required: true, ref: 'status_list'},
