@@ -19,7 +19,7 @@ router.post(
     [
         check('idPaciente').not().isEmpty(),
         check('idDoctor').not().isEmpty(),
-        check('date').trim().isDate(),
+        check('date').not().isEmpty(),
         check('time').not().isEmpty(),
         check('messagePaciente').not().isEmpty(),
         check('doctorPrice').not().isEmpty()
